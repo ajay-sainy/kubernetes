@@ -37,6 +37,7 @@
        kubectl config unset contexts  
        kubectl config unset clusters  
        kubectl config unset current-context  
+    6. kubectl config set-context k8s --namespace=working-namespace
 
 ## Login to azure
     az login
