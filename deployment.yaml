@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo-deployment  
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: demo-app
+  template:
+     metadata:
+       labels:
+         app: demo-app
+     spec:
+       containers:
+         - name: nodejs
+           image: ajayk8s.azurecr.io/sample/app
+           ports:
+             - containerPort: 8080
