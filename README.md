@@ -18,10 +18,12 @@
 ## Steps:
 1. Install azure cli
 2. Install kubectl using azure cli
-3. Create a docker image
-4. Push the image to a repo
+3. Create a docker image [NodeJs](https://nodejs.org/en/docs/guides/nodejs-docker-webapp/)
+4. Create ACR
+5. Authenticate with ACR (az acr login --name \<acrName>)
+4. Push the image to a repo (docker push \<imagetag>)
 5. Create AKS
-6. Get cerdentials to the kubectl
+6. Get cerdentials to the kubectl (az aks get-credentials --resource-group k8s --name k8s)
 7. Create the deployment yaml
 8. Apply the deployement yaml
 
@@ -40,10 +42,10 @@
     az login
 
 ## Setup credentials
-    az aks get-credentials --resource-group POCs --name rpsaascluster
+    az aks get-credentials --resource-group k8s --name k8s
 
 ## to start kubernetes dashboard
-    az aks browse --resource-group POCs --name rpsaascluster --listen-port 789
+    az aks browse --resource-group k8s --name k8s --listen-port 789
     
     
 ## Useful links
