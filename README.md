@@ -22,15 +22,16 @@
 4. Push the image to a repo
 5. Create AKS
 6. Get cerdentials to the kubectl
-7. Create the config file
-8. apply the config file
+7. Create the deployment yaml
+8. Apply the deployement yaml
 
 
 ## Commands
     1. kubectl scale deployments/<name> --replicas=4
     2. kubectl get pods -o wide
-    3. kubectl get --raw /apis | python -mjson.tool
-    4. kubectl config unset users  
+    3. kubectl proxy --port=8080
+    4. kubectl get --raw /apis | python -mjson.tool    
+    5. kubectl config unset users  
        kubectl config unset contexts  
        kubectl config unset clusters  
        kubectl config unset current-context  
